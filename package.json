@@ -7,6 +7,7 @@
   "author": "Mostafa Eweda <mo.eweda@gmail.com>",
   "dependencies": {
     "async": "~0.2.8",
+    "basic-auth-connect": "^1.0.0",
     "express": "~3.2.4",
     "node-wa": "^0.1.5",
     "socket.io": "~0.9.14"
