@@ -9,7 +9,7 @@
     app.config(function($routeProvider){
        $routeProvider
        .when("/", {
-          templateUrl: "/backend/templates/slideSelection.html",
+          templateUrl: "templates/slideSelection.html",
           controller: "SlideController"
        });
     });
