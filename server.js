@@ -13,8 +13,6 @@ app.use(cors());
 
 app.use(express.static(__dirname + "/backend"));
 
-io.set('origins', 'http://tvr2wei-eimerreis.c9.io');
-
 io.on('connection', function(socket){
   console.Log("user connected");
   socket.on('change-slide', function(slide){
@@ -24,4 +22,3 @@ io.on('connection', function(socket){
 });
 
 server.listen(process.env.PORT || 3000);
-
