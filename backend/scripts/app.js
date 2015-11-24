@@ -10,7 +10,7 @@
        $routeProvider
        .when("/", {
           templateUrl: "templates/slideSelection.html",
-          controller: ""
+          controller: "SlideController"
        });
     });
     
