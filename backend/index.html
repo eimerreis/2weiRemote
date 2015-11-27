@@ -1,5 +1,5 @@
 <!Doctype html>
-<html>
+<html >
     <head>
         <meta name="viewport" content="initial-scale=1">
         <title>TVR 2wei Heimspiel - Backend</title>
@@ -10,8 +10,8 @@
         <!-- Custom Stylesheet -->
         <link rel="stylesheet" type="text/css" href="style.css" />
     </head>
-    <body>
-    <div ng-app="backend" class="ui container">
+    <body ng-app="backend">
+    <div class="ui container">
             <div class="ui three item pointing menu">
                 <a class="item active">
                     Folien
@@ -37,6 +37,9 @@
     <script src="libs/angular-1.4.7/angular.js"></script>
     <script src="libs/angular-1.4.7/angular-route.min.js"></script>
     
+    <!-- Angular Modules -->
+    <!-- Slides -->
+    <script src="scripts/modules/slides/slides-module.js"></script>
     
     <!-- Angular App -->
     <script src="scripts/app.js"></script>
@@ -45,9 +48,6 @@
     <script src="libs/socket.io/socket.io.js"></script>
     <script src="scripts/socket.client.js"></script>
     
-    <!-- Angular Modules -->
-    <!-- Slides -->
-    <script src="scripts/modules/slides/slides-module.js"></script>
     
     </body>
 </html>
