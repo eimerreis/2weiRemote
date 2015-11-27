@@ -1,35 +1,34 @@
         <div ng-controller="SlideController" class="ui stackable four column grid slide-selection">
             <div class="row">
                 <div class="column">
-                    <div ng-class="{'blue': activeSlide == 'aufstellung'}" class="ui center aligned segment">
+                    <div ng-class="{'blue': activeSlide == 'aufstellung'}" ng-click="changeSlide('aufstellung')" class="ui center aligned segment">
                         <img class="ui medium bordered image" src="img/TVRAufstellung.jpg" />
-                        <p>{{activeSlide}}</p>
                     </div>
                 </div>
                 <div class="column">
-                    <div class="ui center aligned segment">
+                    <div ng-class="{'blue': activeSlide == 'tabelle'}" ng-click="changeSlide('tabelle')" class="ui center aligned segment">
                         <img class="ui medium bordered image" src="img/Tabelle3Liga.jpg" />
                     </div>
                 </div>
                 <div class="column">
-                    <div class="ui center aligned segment">
+                    <div ng-class="{'blue': activeSlide == 'teambild'}" ng-click="changeSlide('teambild')" class="ui center aligned segment">
                         <img class="ui medium bordered image" src="img/Mannschaftsbild.jpg" />
                     </div>
                 </div>
                 <div class="column">
-                    <div class="ui center aligned segment">
+                    <div ng-class="{'blue': activeSlide == 'spielerEinzeln'}" ng-click="changeSlide('spielerEinzeln')" class="ui center aligned segment">
                         <img class="ui medium bordered image" src="img/SpielerEinzeln.jpg" />
                     </div>
                 </div>
             </div>
             <div class="row">
                 <div class="column">
-                    <div class="ui center aligned segment">
+                    <div ng-class="{'blue': activeSlide == 'publikumsChat'}" ng-click="changeSlide('publikumsChat')" class="ui center aligned segment">
                         <img class="ui medium bordered image" src="img/PublikumsChat.jpg" />
                     </div>
                 </div>
                 <div class="column">
-                    <div class="ui center aligned segment">
+                    <div ng-class="{'blue': activeSlide == 'ChatErklaerung'}" ng-click="changeSlide('chatErklaerung')" class="ui center aligned segment">
                         <img class="ui medium bordered image" src="img/ChatErklaerung.jpg" />
                     </div>
                 </div>

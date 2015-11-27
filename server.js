@@ -14,7 +14,8 @@ app.use(cors());
 app.use(express.static(__dirname + "/backend"));
 
 io.on('connection', function(socket){
-  console.log("user connected");
+  console.log("user connected: " + socket.id);
+  
   socket.on('change-slide', function(slide){
     console.log("-------------------- Folie geändert: " + slide);
   });
