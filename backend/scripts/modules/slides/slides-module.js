@@ -17,7 +17,7 @@
             console.log("Übergebener Wert: " + slide);
             console.log("Wert im Array: " + $scope.slides[slide])
             $scope.activeSlide = slide
-            socket.emit("changeSlide", $scope.slides[slide]);
+            socket.emit("change-slide", $scope.slides[slide]);
         };
     });
 })();
