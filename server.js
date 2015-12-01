@@ -20,6 +20,11 @@ io.on('connection', function(socket){
     console.log("-------------------- Folie geändert: " + slide);
     io.emit('change-slide', slide);
   });
+  
+  socket.on('chat-message', function(message){
+    io.emit('chat-message', message);
+  });
+  
   io.emit("connection-successful");
 });
 
