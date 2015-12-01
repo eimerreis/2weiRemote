@@ -18,6 +18,7 @@ io.on('connection', function(socket){
   
   socket.on('change-slide', function(slide){
     console.log("-------------------- Folie geändert: " + slide);
+    io.emit('change-slide', slide);
   });
   io.emit("connection-successful");
 });
