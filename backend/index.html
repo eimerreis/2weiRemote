@@ -12,14 +12,14 @@
     </head>
     <body ng-app="backend">
     <div class="ui container">
-            <div class="ui three item pointing menu">
-                <a href="#/" class="item active">
+            <div ng-controller="MenuController" class="ui three item pointing menu">
+                <a ng-class="{active: isActive('/')}" href="#/" class="item">
                     Folien
                 </a>
-                <a href="#players" class="item">
+                <a ng-class="{active: isActive('/players')}" href="#players" class="item">
                     Aufstellung
                 </a>
-                <a class="item">
+                <a ng-class="{active: isActive('/question')}" class="item">
                     Umfrage
                 </a>
             </div>

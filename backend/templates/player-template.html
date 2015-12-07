@@ -1,0 +1,18 @@
+<div ng-controller="PlayerController" class="ui massive aligned divided list">
+  <div ng-repeat="player in players" class="item">
+    <div class="ui grid">
+      <div class="two wide column">
+        <b>#{{player.number}}</b>
+      </div>
+      <div class="ten wide column">
+        {{player.name}}
+      </div>
+      <div class="four wide column">
+        <div class="ui right floated fitted toggle checkbox">
+        <input ng-model="player.active" ng-change="playerStateChanged(player.number, player.active)" type="checkbox">
+        <label></label>
+      </div>  
+      </div>
+    </div>
+  </div>
+</div>

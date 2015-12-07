@@ -29,26 +29,4 @@ io.on('connection', function(socket){
 });
 
 
-/* REST API mit MySQL auf AzureServer */
-var mysql = require("mysql");
-var connection = mysql.createConnection({
-  host: "us-cdbr-azure-west-c.cloudapp.net", 
-  user: "be9b0f898c4d72", 
-  password: "64590c3e",
-  database: "h2weiSQL"
-});
-
-var apiPrefix = "/api";
-
-//GET Players
-app.get(apiPrefix + "/players", function(req, res){
-  connection.query("SELECT * FROM players", function(err, result){
-    res.json(result);
-    console.log("Ergebnis aus Datenbankabfrage: " + result);
-    //connection.release();
-  });
-});
-
-
-
 server.listen(process.env.PORT || 3000);
