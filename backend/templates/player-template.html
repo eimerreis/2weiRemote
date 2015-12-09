@@ -1,5 +1,5 @@
 <div ng-controller="PlayerController" class="ui massive aligned divided list">
-  <div ng-repeat="player in players" class="item">
+  <div ng-repeat="player in players | orderBy: '+number'" class="item">
     <div class="ui grid">
       <div class="two wide column">
         <b>#{{player.number}}</b>

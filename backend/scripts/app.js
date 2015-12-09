@@ -1,7 +1,7 @@
 "use strict";
 /* global angular */
 (function(){
-    var app = angular.module("backend", ['ngRoute', 'app.slides', 'app.players']);
+    var app = angular.module("backend", ['ngRoute', 'ngResource', 'app.slides', 'app.players']);
     app.controller("BackendController", function($scope){
         
     });
