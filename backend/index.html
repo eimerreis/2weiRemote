@@ -17,10 +17,10 @@
                     Folien
                 </a>
                 <a ng-class="{active: isActive('/players')}" href="#players" class="item">
-                    Aufstellung
+                    Spieler
                 </a>
-                <a ng-class="{active: isActive('/question')}" class="item">
-                    Umfrage
+                <a ng-class="{active: isActive('/lineup')}" href="#lineup" class="item">
+                    Aufstellung
                 </a>
             </div>
             <div ng-view>
@@ -37,12 +37,15 @@
     <script src="libs/angular-1.4.7/angular.js"></script>
     <script src="libs/angular-1.4.7/angular-route.min.js"></script>
     <script src="libs/angular-1.4.7/angular-resource.min.js"></script>
+    <script src="libs/angular-draganddrop/angular-draganddrop.min.js"></script>
     
     <!-- Angular Modules -->
     <!-- Slides -->
     <script src="scripts/modules/slides/slides-module.js"></script>
     <!-- Players -->
     <script src="scripts/modules/players/players-module.js"></script>
+    <!-- Lineup Module -->
+    <script src="scripts/modules/lineup/lineup-module.js"></script>
     <!-- Angular App -->
     <script src="scripts/app.js"></script>
     

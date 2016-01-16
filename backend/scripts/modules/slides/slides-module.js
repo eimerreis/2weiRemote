@@ -6,17 +6,19 @@
     slides.controller("SlideController", function($scope){
         $scope.activeSlide = "";
         $scope.slides = {
-            aufstellung: 1, 
+            aufstellung: 1,
+            "aufstellungGaeste": 2,
             "tabelle": 3,
             "spielerEinzeln": 4,
             "teambild": 5, 
             "chat": 7,
-            "chatErklaerung": 8
+            "chatErklaerung": 8, 
+            "video": 10
         };
         $scope.changeSlide = function(slide){
             console.log("Übergebener Wert: " + slide);
-            console.log("Wert im Array: " + $scope.slides[slide])
-            $scope.activeSlide = slide
+            console.log("Wert im Array: " + $scope.slides[slide]);
+            $scope.activeSlide = slide;
             socket.emit("change-slide", $scope.slides[slide]);
         };
     });
