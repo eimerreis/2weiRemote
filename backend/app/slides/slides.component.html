@@ -1,0 +1,9 @@
+<div class="ui stackable four column grid slide-selection">
+            <div class="row">
+                <div *ngFor="let slide of slides" class="column">
+                    <div (click)="SlideClicked(slide)" class="ui center aligned segment">
+                        <h3>{{slide.name}}</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
