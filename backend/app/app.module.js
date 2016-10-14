@@ -11,6 +11,9 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require("@angular/core");
 var platform_browser_1 = require("@angular/platform-browser");
 var router_1 = require("@angular/router");
+//Services
+var socket_service_1 = require("./services/socket/socket.service");
+// Components
 var app_component_1 = require("./app.component");
 var slides_component_1 = require("./slides/slides.component");
 var AppModule = (function () {
@@ -33,8 +36,10 @@ AppModule = __decorate([
             app_component_1.AppComponent,
             slides_component_1.SlidesComponent
         ],
+        providers: [socket_service_1.SocketService],
         bootstrap: [app_component_1.AppComponent]
     }),
     __metadata("design:paramtypes", [])
 ], AppModule);
 exports.AppModule = AppModule;
+//# sourceMappingURL=app.module.js.map
