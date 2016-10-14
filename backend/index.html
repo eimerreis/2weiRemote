@@ -3,12 +3,22 @@
     <head>
         <meta name="viewport" content="initial-scale=1">
         <title>TVR 2wei Heimspiel - Backend</title>
-        
+
         <!-- Semantic UI -->
         <link rel="stylesheet" type="text/css" href="libs/semantic/semantic.min.css" />
-        
+
         <!-- Custom Stylesheet -->
         <link rel="stylesheet" type="text/css" href="style.css" />
+
+        <script src="node_modules/core-js/client/shim.min.js"></script>
+        <script src="node_modules/zone.js/dist/zone.js"></script>
+        <script src="node_modules/reflect-metadata/Reflect.js"></script>
+        <script src="node_modules/systemjs/dist/system.src.js"></script>
+        <!-- 2. Configure SystemJS -->
+        <script src="systemjs.config.js"></script>
+        <script>
+          System.import('app').catch(function(err){ console.error(err); });
+        </script>
     </head>
     <body ng-app="backend">
     <div class="ui container">
@@ -24,35 +34,19 @@
                 </a>
             </div>
             <div ng-view>
-                
+
             </div>
     </div>
     <!-- jQuery -->
     <script type="text/javascript" src="libs/jquery/jquery-2.1.4.min.js"></script>
-    
+
     <!-- Semnatic UI -->
     <script type="text/javascript" src="libs/semantic/semantic.min.js"></script>
-    
-    <!-- Angular und Module -->
-    <script src="libs/angular-1.4.7/angular.js"></script>
-    <script src="libs/angular-1.4.7/angular-route.min.js"></script>
-    <script src="libs/angular-1.4.7/angular-resource.min.js"></script>
-    <script src="libs/angular-draganddrop/angular-draganddrop.min.js"></script>
-    
-    <!-- Angular Modules -->
-    <!-- Slides -->
-    <script src="scripts/modules/slides/slides-module.js"></script>
-    <!-- Players -->
-    <script src="scripts/modules/players/players-module.js"></script>
-    <!-- Lineup Module -->
-    <script src="scripts/modules/lineup/lineup-module.js"></script>
-    <!-- Angular App -->
-    <script src="scripts/app.js"></script>
-    
+
     <!-- Socket IO -->
     <script src="libs/socket.io/socket.io.js"></script>
     <script src="scripts/socket.client.js"></script>
-    
-    
+
+
     </body>
 </html>

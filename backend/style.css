@@ -1,6 +1,0 @@
-.slide-selection .row .column > .segment:hover {
-    cursor: pointer;    
-    -webkit-box-shadow: 3px 3px 39px -16px rgba(0,0,0,0.75);
-    -moz-box-shadow: 3px 3px 39px -16px rgba(0,0,0,0.75);
-    box-shadow: 3px 3px 39px -16px rgba(0,0,0,0.75);
-}
