@@ -1,6 +1,7 @@
 <!Doctype html>
 <html >
     <head>
+      <base href="/players">
         <meta name="viewport" content="initial-scale=1">
         <title>TVR 2wei Heimspiel - Backend</title>
 
@@ -20,23 +21,8 @@
           System.import('app').catch(function(err){ console.error(err); });
         </script>
     </head>
-    <body ng-app="backend">
-    <div class="ui container">
-            <div ng-controller="MenuController" class="ui three item pointing menu">
-                <a ng-class="{active: isActive('/')}" href="#/" class="item">
-                    Folien
-                </a>
-                <a ng-class="{active: isActive('/players')}" href="#players" class="item">
-                    Spieler
-                </a>
-                <a ng-class="{active: isActive('/lineup')}" href="#lineup" class="item">
-                    Aufstellung
-                </a>
-            </div>
-            <div ng-view>
-
-            </div>
-    </div>
+    <body>
+      <zwei-remote></zwei-remote>
     <!-- jQuery -->
     <script type="text/javascript" src="libs/jquery/jquery-2.1.4.min.js"></script>
 

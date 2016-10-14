@@ -10,7 +10,9 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require("@angular/core");
 var platform_browser_1 = require("@angular/platform-browser");
+var router_1 = require("@angular/router");
 var app_component_1 = require("./app.component");
+var slides_component_1 = require("./slides/slides.component");
 var AppModule = (function () {
     function AppModule() {
     }
@@ -18,11 +20,21 @@ var AppModule = (function () {
 }());
 AppModule = __decorate([
     core_1.NgModule({
-        imports: [platform_browser_1.BrowserModule],
-        declarations: [app_component_1.AppComponent],
+        imports: [
+            platform_browser_1.BrowserModule,
+            router_1.RouterModule.forRoot([
+                { path: '', component: slides_component_1.SlidesComponent },
+                { path: 'players', component: slides_component_1.SlidesComponent },
+                { path: 'slides', component: slides_component_1.SlidesComponent },
+                { path: 'polls', component: slides_component_1.SlidesComponent }
+            ])
+        ],
+        declarations: [
+            app_component_1.AppComponent,
+            slides_component_1.SlidesComponent
+        ],
         bootstrap: [app_component_1.AppComponent]
     }),
     __metadata("design:paramtypes", [])
 ], AppModule);
 exports.AppModule = AppModule;
-//# sourceMappingURL=app.module.js.map
